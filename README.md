@@ -19,6 +19,16 @@ It allows users to perform basic arithmetic and mathematical operations interact
 ---
 
 ## 📂 Project Structure
+calculator-project/
+│── index.html
+│── style.css
+│── script.js
+│── README.md
+│── LICENSE
+│── screenshots/
+    ├── calculator-ui.png
+  
+
 # 🧮 JavaScript Calculator
 
 A simple web-based calculator built with **HTML, CSS, and JavaScript**.  
@@ -74,9 +84,6 @@ It allows users to perform basic arithmetic and mathematical operations interact
 ### Calculator UI
 ![Calculator UI]<img width="1600" height="774" alt="calculator" src="https://github.com/user-attachments/assets/8d95ad81-1501-462e-ab82-4b643612ed6e" />
 
-
-### Example Calculation
-![Calculation Example]C:\Users\moham\OneDrive\Pictures\Screenshots\calculator.png
 
 ---
 
