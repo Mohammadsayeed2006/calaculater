@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Simple Calculator</title>
+ <link rel="stylesheet" href="style.css">
+ <style>
+ body {
+ font-family: Arial, sans-serif;
+ text-align: center;
+ padding: 20px;
+ }
+ .calculator {
+ max-width: 400px;
+ margin: auto;
+ padding: 20px;
+ border: 1px solid #ccc;
+ border-radius: 10px;
+ background: #f9f9f9;
+ }
+ input,
+ select,
+ button {
+ width: 100%;
+ margin: 10px 0;
+ padding: 10px;
+ font-size: 16px;
+ }
+ #result {
+ margin-top: 15px;
+ padding: 10px;
+ font-weight: bold;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+ background: #e0ffe0;
+ }
+ </style>-->
+</head>
+<body>
+ <div class="calculator">
+ <h1>Calculator</h1>
+ <input type="number" id="num1" placeholder="Enter first number">
+ <input type="number" id="num2" placeholder="Enter second number">
+ <select id="operation">
+ <option value="">Select Operation</option>
+ <option value="sum">Sum</option>
+ <option value="product">Product</option>
+ <option value="difference">Difference</option>
+ <option value="remainder">Remainder</option>
+ <option value="quotient">Quotient</option>
+ <option value="power">Power</option>
+ <option value="sqrt">Square Root</option>
+ <option value="square">Square</option>
+ </select>
+ <button onclick="calculate()">Calculate</button>
+ <div id="result"></div>
+ </div>
+ <script src="index.js"></script>
+ <script>
+ function calculate() {
+ const num1 = parseFloat(document.getElementById('num1').value);
+ const num2 = parseFloat(document.getElementById('num2').value);
+ const operation = document.getElementById('operation').value;
+ let result = '';
+ switch (operation) {
+ case 'sum':
+ result = `Sum: ${num1 + num2}`;
+ break;
+ case 'product':
+ result = `Product: ${num1 * num2}`;
+ break;
+ case 'difference':
+ result = `Difference: ${num1 - num2}`;
+ break;
+ case 'remainder':
+ result = `Remainder: ${num1 % num2}`;
+ break;
+ case 'quotient':
+ result = num2 !== 0 ? `Quotient: ${num1 / num2}` : 'Cannot divide by zero';
+ break;
+ case 'power':
+ result = `Power: ${Math.pow(num1, num2)}`;
+ break;
+ case 'sqrt':
+ result = `Square Root of ${num1}: ${Math.sqrt(num1)}<br>Square Root of ${num2}: 
+${Math.sqrt(num2)}`;
+ break;
+ case 'square':
+ result = `Square of ${num1}: ${Math.pow(num1, 2)}<br>Square of ${num2}: 
+${Math.pow(num2, 2)}`;
+ break;
+ default:
+ result = 'Please select a valid operation';
+ }
+ document.getElementById('result').innerHTML = result;
+ }
+ </script>-->
+</body>
+</html>
